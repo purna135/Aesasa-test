@@ -32,18 +32,15 @@ jobs:
 
     - name: Install dependencies
       run: |
+        pip install -r requirements.txt
         pip install pytest-monitor pytest-profiling pytest-html
 
     - name: Run tests and generate report
       run: |
         pytest \
           --junitxml=test-results.xml \
-          --monitor-cpu=90 \
-          --monitor-memory=90 \
-          --profile=tests/profile \
+          --profile \
           --profile-svg \
-          --profile-svg-path=profiles/ \
-          --profile-sort=avgtime \
           --html=report.html \
           --self-contained-html
       env:
