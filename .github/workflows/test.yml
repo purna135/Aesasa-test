@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 # Cancels all previous workflow runs for pull requests that have not completed.
 concurrency:
