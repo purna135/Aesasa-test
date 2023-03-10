@@ -206,7 +206,7 @@ jobs:
           auto-push: false
 
   profiling:
-    name: "Benchmarks"
+    name: "Pytest Profiling"
     needs:
       - changes
       - style
