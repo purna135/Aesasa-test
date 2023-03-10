@@ -46,11 +46,3 @@ repos:
               aesara/tensor/linalg\.py
           )$
         args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable']
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.991
-    hooks:
-      - id: mypy
-        additional_dependencies:
-        - numpy>=1.20
-        - types-filelock
-        - types-setuptools
